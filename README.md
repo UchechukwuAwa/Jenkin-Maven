@@ -1,15 +1,11 @@
-# Continuous Integration and Deployment Pipeline with Jenkins, Docker, and Nginx
+# Continuous Integration and Deployment Pipeline with Jenkins and Maven
 
-This project demonstrates the setup and deployment of a containerized web application using Docker and Jenkins, with Nginx as the web server and Certbot for SSL certification.
-
+This is a practice project for the integration of Maven with Jenkins for Continous Integration
 ## Tools and Technologies
 
 - **Maven**: Build Tool
 - **GitHub**: Source Control Management
 - **Jenkins**: Continuous Integration and Continuous Deployment (CI/CD) Tool
-- **Docker**: Containerization
-- **Nginx**: Web Server
-- **Certbot**: SSL Certification
 
 ## Project Setup
 
@@ -64,17 +60,6 @@ This project demonstrates the setup and deployment of a containerized web applic
 1. Navigate to **Manage Jenkins** -> **Tools** -> **Maven Installation**.
 2. Add Maven to the global tool configuration.
 
-### Step 3: Setup Docker in Jenkins
-
-1. Install Docker:
-   ```sh
-   curl -fsSL get.docker.com | /bin/bash
-   sudo usermod -aG docker jenkins
-   sudo usermod -aG docker ubuntu
-   sudo systemctl restart jenkins
-   sudo docker version
-   ```
-
 ### Step 4: Create Jenkins Job
 
 1. **Stage 1: Clone Git Repository**
@@ -94,24 +79,7 @@ Enable the necessary ports in the security group to allow external access.
 
 Open a web browser and navigate to `http://<public-ip>:<port>/` to access the application.
 
-### Step 8: Nginx Web Server
-
-Configure Nginx as a reverse proxy for the application.
-
-### Step 9: Domain Configuration
-
-Configure a domain name to point to the public IP of the Nginx server.
-
-### Step 10: SSL Certificate
-
-Use Certbot to obtain and configure an SSL certificate for secure HTTPS access.
-
-## Cleanup
-
-After testing and practice, delete the resources in the cloud to avoid unnecessary billing.
-
-
 
 ## Conclusion
 
-This project showcases the end-to-end process of deploying a containerized web application using modern DevOps tools and practices. By leveraging Docker for containerization, Jenkins for CI/CD, and Nginx for web serving, this setup ensures a scalable, reliable, and secure web application environment.
+This project showcases the end-to-end process of Continous Integration(CI) with the use of Jenkins and Maven.
